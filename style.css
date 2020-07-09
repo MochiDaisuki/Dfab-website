@@ -1,6 +1,8 @@
 body {
-	background-color: #FF2A67;
+    background-image: url(images/fault.JPG);
+	background-color: #000000;
 	font-family:Helvetica, Arial, sans-serif;
+    background-repeat: no-repeat;
 }
 
 
