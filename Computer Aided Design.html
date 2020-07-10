@@ -107,14 +107,68 @@
                            <img src="images/egg cup 4.JPG" width="350px" height= "425px" />
                        </ol>
                        <h3>Laser cut box</h3>
+                       <img src="images/laser box.JPG" width="425px" height= "425px" />
                           <p>First  set up parameters so that it will easier to change the dimensions of the laser cut box after modelling everything</p>
-                           
+                           <br>
+                       <p>Parameter settings can be found under modify tab</p>
                            <ul>
-                               <p>note:does not have to be these exact measurments</p>
-                               <li>Length: 60mm</li>
+                              
+                               <li>Length: 100mm</li>
                                <li>Thickness: 3mm</li>
-                               <li>Slot: 20mm</li>
+                               <li>width: 60mm</li>
+                               <li>height: 80mm</li>
+                               <li>ntabs_l: 5 units</li>
+                               <li>ntabs_w: 3 units</li>
+                               <li>ntabs_h: 3 units</li>
+                            <p>note:does not have to be these exact measurments</p>
+                               <p>ntab is short form for number of tabs</p>
                            </ul>
+                       <img src="images/parameter.JPG" width="600px" height= "250px" />
+                       
+                       <h3>Steps</h3>
+                        
+                       <p>The first piece we are going to create is the Front piece</p>
+                       <ol>
+                           <li> create>new component and name it "Front"</li>
+                           <li>create sketch and choose the Y and Z axis plane </li>
+                           <li>Starting from the origin point , drag and create a 2 point rectangle of any size </li>
+                           <li>Select the line tool and turn on construction, drag and create 3 lines across the rectangle as shown below.It does not matter where you place them at this point,we will use parameters to fix the distances later.</li>
+                           <img src="images/step 1.JPG" width="500px" height= "250px" />
+                           <li> Select sketch dimension tool and click on 2 lines to control the distance between them.</li>
+                           <img src="images/step 2.JPG" width="500px" height= "250px" />
+                           <li>when Fusion 360 prompts you for a measurement, type in the name of the coresponding parameter, as show above </li>
+                           <p>you can also use a slash symbol / , to divide the parameter , hence the function of the ntabs parameter.</p>
+                           <img src="images/step 3.JPG" width="500px" height= "250px" />
+                           <li> Input the measurements shown below </li>
+                           <img src="images/step 4.JPG" width="500px" height= "250px" />
+                           <li>Next draw a construction line horizontally right in the middle of the rectangle,Fusion 360 will show a triangle symbol when your cursor at the middle point. </li>
+                           <li>Select the mirror tool under the create tab</li>
+                           <li>For mirror line , select the middle line , for objects select the small rectangle to the left.</li>
+                           <p>Finish the sketch and you should get something like this</p>
+                           <img src="images/step 5.JPG" width="500px" height= "250px" />
+                           <li>Extrude the sketch by 3mm with operation as "new body"</li>
+                           <li>Create a new component,name it "left", and create a sketch on the left face</li>
+                           <li>Create a rectangle of any size and use the collinear tool,under constraints to fit it to the front piece</li>
+                           <img src="images/step 6.JPG" width="500px" height= "250px" />
+                           <li>Use the same techniques in the previous step to get the left piece as shown below</li>
+                           <img src="images/step 7.JPG" width="300px" height= "500px" />
+                           <li>Finish and Extrude the sketch</li>
+                           <li>Select the combine tool , under Modify tab</li>
+                           <p>Target bodies: Left piece , Tool bodies: Front piece , Operation: Cut , Keep tool: Ticked , New component: unticked</p>
+                           <img src="images/step 8.JPG" width="500px" height= "250px" />
+                           <li> Next under Construct tab, select mid plane and select two sides of the front piece </li>
+                           <img src="images/step 9.JPG" width="500px" height= "250px" />
+                           <p>Create>mirror Pattern type: Components  Objects:Left piece Mirror plane: Mid plane </p>
+                           <img src="images/step 10.JPG" width="500px" height= "250px" />
+                           <p> Repeat for the Front piece </p>
+                           <img src="images/step 11.JPG" width="500px" height= "250px" />
+                           <li>Combine and cut the pieces </li>
+                           <li>Finally for the base piece ,Create a new component and Select the reference face for sketch </li>
+                           <li> Use the same techniques for the other faces , combine and cut </li>
+                           <img src="images/laser box.JPG" width="425px" height= "425px" />
+                           
+                       </ol>
+                       
                        
 				    </div>
 		    </div>
