@@ -71,6 +71,50 @@
                        <p> I plan out the various measurements inside Clip Studio Paint so that it would be very easy to model it out inside Fusion 360.</p>
                        <img src="images/3d box.JPG" width="600px" height= "350px" />
                        
+                       
+                       <h3>Project update 8/5/2020 </h3>
+                       <p> For Embedded programing , I have a push button as the input and a RGB LED as the output.</p>
+                       <p> Here is the schematic I have for this project</p>
+                       <img src="images/schmatic.JPG" width="600px" height= "350px" />
+                       
+                       <p>and here is the code I will be using </p>
+                       
+                       <img src="images/code%201.JPG" width="350px" height= "600px" />
+                       <img src="images/code%202.JPG" width="350px" height= "600px" />
+                       
+                       <p> I got my inspiration from two projects that is published on Arduino project hub</p>
+                       <li><a href="https://create.arduino.cc/projecthub/SHAHIR_nasar/simple-rgb-led-light-with-fade-635bc2"> RGB LED fading</a></li>
+                       <li><a href="https://create.arduino.cc/projecthub/gol73/innovation-lab-5-push-button-rgb-led-color-change-6f4453"> Button control</a></li>
+                       
+                       <p>I borrow the code from these two projects and tried to combine them</p>
+                       <p> However I realise that there are mutiple problems with their code and could be optimised a lot more</p>
+                       
+                       <h4>Problems I found in both projects </h4>
+                       <ol>
+                       <li>The value of the resistor used are too high, 220 ohm should be used instead of 1k</li>
+                        <li>The code did not put in the right variables </li>
+                        <li>Some wires in the schematic are placed in the wrong position </li>
+                        <li> Input should be Input-pullup instead of just Input</li>
+                       </ol>
+                       <p> I manage to fix all these problems eventually and that is how I came up with the code above.</p>
+                       
+                       <h3>Code breakdown</h3>
+                       To put it in very simple terms , here is what the code do
+                       <ol>
+                           <li>The code checks which pins are the outputs and which are the inputs</li>
+                           <li>It constantly checks if the button is pressed</li>
+                           <li>If the button is pressed, it adds 1 to a counter which changes what the RGB LED do</li>
+                           <li>The counter will first be equal to zero , which will tell the LED to fade in and out looping different colours at a time. </li>
+                           <li>When the button is pushed , the counter will now be equal to 1</li>
+                           <li> The RGB LED will have a red , green , blue light when the counter is equal to 1 , 2 and 3 respectively </li>
+                           <li>If the counter is equal to 3 and the button is pressed , it will reset itself back to equal 0. </li>
+                       </ol>
+                       
+                       <h3>Switch debounce problem</h3>
+                        <p>I put everything I have inside Tinkercad and it works as intended.</p>
+                       <p> However when I connected everything in real life , the button counter counts more times than it should.</p>
+                       <p>That is when I realise there is a switch debouncing problem.</p>
+                    
 				    </div>
 		    </div>
 				 <div id="footer">
